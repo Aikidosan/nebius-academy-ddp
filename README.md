@@ -294,7 +294,7 @@ sky logs ddp-run
 ### 5b. Save the full log
 
 ```bash
-sky logs ddp-run > training_log.txt
+sky logs ariel-ddp > training_log.txt
 ```
 
 Verify the log contains NCCL init lines — look for patterns like:
@@ -307,7 +307,7 @@ Verify the log contains NCCL init lines — look for patterns like:
 ### 5c. Clean up
 
 ```bash
-sky down ddp-run
+sky down ariel-ddp
 ```
 
 ---

@@ -1,0 +1,1485 @@
+[33mTailing logs of the last job on cluster 'ariel-ddp'...[0m
+Job ID not provided. Streaming the logs of the latest job.
+[2m├── [0m[2mWaiting for task resources on 2 nodes.[0m
+[2m└── [0mJob started. Streaming logs... [2m(Ctrl-C to exit log streaming; job will not be killed)[0m
+[36m(head, rank=0, pid=3718)[0m ++ echo '10.0.44.87
+[36m(head, rank=0, pid=3718)[0m 10.16.3.211'
+[36m(head, rank=0, pid=3718)[0m ++ head -n 1
+[36m(head, rank=0, pid=3718)[0m + MASTER_ADDR=10.0.44.87
+[36m(head, rank=0, pid=3718)[0m + MASTER_PORT=29500
+[36m(head, rank=0, pid=3718)[0m + echo SKYPILOT_NODE_RANK=0
+[36m(head, rank=0, pid=3718)[0m SKYPILOT_NODE_RANK=0
+[36m(head, rank=0, pid=3718)[0m + echo SKYPILOT_NUM_NODES=2
+[36m(head, rank=0, pid=3718)[0m SKYPILOT_NUM_NODES=2
+[36m(head, rank=0, pid=3718)[0m + echo SKYPILOT_NUM_GPUS_PER_NODE=1
+[36m(head, rank=0, pid=3718)[0m SKYPILOT_NUM_GPUS_PER_NODE=1
+[36m(head, rank=0, pid=3718)[0m + echo SKYPILOT_NODE_IPS:
+[36m(head, rank=0, pid=3718)[0m SKYPILOT_NODE_IPS:
+[36m(head, rank=0, pid=3718)[0m + echo '10.0.44.87
+[36m(head, rank=0, pid=3718)[0m 10.16.3.211'
+[36m(head, rank=0, pid=3718)[0m 10.0.44.87
+[36m(head, rank=0, pid=3718)[0m 10.16.3.211
+[36m(head, rank=0, pid=3718)[0m + echo MASTER_ADDR=10.0.44.87
+[36m(head, rank=0, pid=3718)[0m MASTER_ADDR=10.0.44.87
+[36m(head, rank=0, pid=3718)[0m ++ pwd
+[36m(head, rank=0, pid=3718)[0m + echo PWD=/root/sky_workdir
+[36m(head, rank=0, pid=3718)[0m PWD=/root/sky_workdir
+[36m(head, rank=0, pid=3718)[0m + test -f train.py
+[36m(head, rank=0, pid=3718)[0m + torchrun --nproc_per_node=1 --nnodes=2 --node_rank=0 --master_addr=10.0.44.87 --master_port=29500 train.py
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ++ echo '10.0.44.87
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 10.16.3.211'
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ++ head -n 1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + MASTER_ADDR=10.0.44.87
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + MASTER_PORT=29500
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo SKYPILOT_NODE_RANK=1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m SKYPILOT_NODE_RANK=1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo SKYPILOT_NUM_NODES=2
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m SKYPILOT_NUM_NODES=2
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo SKYPILOT_NUM_GPUS_PER_NODE=1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m SKYPILOT_NUM_GPUS_PER_NODE=1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo SKYPILOT_NODE_IPS:
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m SKYPILOT_NODE_IPS:
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo '10.0.44.87
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 10.16.3.211'
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 10.0.44.87
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 10.16.3.211
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo MASTER_ADDR=10.0.44.87
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m MASTER_ADDR=10.0.44.87
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ++ pwd
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + echo PWD=/root/sky_workdir
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m PWD=/root/sky_workdir
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + test -f train.py
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + torchrun --nproc_per_node=1 --nnodes=2 --node_rank=1 --master_addr=10.0.44.87 --master_port=29500 train.py
+[36m(head, rank=0, pid=3718)[0m /usr/local/lib/python3.12/dist-packages/torch/library.py:356: UserWarning: Warning only once for all operators,  other operators may also be overridden.
+[36m(head, rank=0, pid=3718)[0m   Overriding a previously registered kernel for the same operator and the same dispatch key
+[36m(head, rank=0, pid=3718)[0m   operator: flash_attn::_flash_attn_backward(Tensor dout, Tensor q, Tensor k, Tensor v, Tensor out, Tensor softmax_lse, Tensor(a6!)? dq, Tensor(a7!)? dk, Tensor(a8!)? dv, float dropout_p, float softmax_scale, bool causal, SymInt window_size_left, SymInt window_size_right, float softcap, Tensor? alibi_slopes, bool deterministic, Tensor? rng_state=None) -> Tensor
+[36m(head, rank=0, pid=3718)[0m     registered at /usr/local/lib/python3.12/dist-packages/torch/_library/custom_ops.py:922
+[36m(head, rank=0, pid=3718)[0m   dispatch key: ADInplaceOrView
+[36m(head, rank=0, pid=3718)[0m   previous kernel: no debug info
+[36m(head, rank=0, pid=3718)[0m        new kernel: registered at /usr/local/lib/python3.12/dist-packages/torch/_library/custom_ops.py:922 (Triggered internally at /opt/pytorch/pytorch/aten/src/ATen/core/dispatch/OperatorEntry.cpp:208.)
+[36m(head, rank=0, pid=3718)[0m   self.m.impl(
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m /usr/local/lib/python3.12/dist-packages/torch/library.py:356: UserWarning: Warning only once for all operators,  other operators may also be overridden.
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m   Overriding a previously registered kernel for the same operator and the same dispatch key
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m   operator: flash_attn::_flash_attn_backward(Tensor dout, Tensor q, Tensor k, Tensor v, Tensor out, Tensor softmax_lse, Tensor(a6!)? dq, Tensor(a7!)? dk, Tensor(a8!)? dv, float dropout_p, float softmax_scale, bool causal, SymInt window_size_left, SymInt window_size_right, float softcap, Tensor? alibi_slopes, bool deterministic, Tensor? rng_state=None) -> Tensor
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m     registered at /usr/local/lib/python3.12/dist-packages/torch/_library/custom_ops.py:922
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m   dispatch key: ADInplaceOrView
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m   previous kernel: no debug info
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m        new kernel: registered at /usr/local/lib/python3.12/dist-packages/torch/_library/custom_ops.py:922 (Triggered internally at /opt/pytorch/pytorch/aten/src/ATen/core/dispatch/OperatorEntry.cpp:208.)
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m   self.m.impl(
+[36m(head, rank=0, pid=3718)[0m [NCCL] Distributed training initialised
+[36m(head, rank=0, pid=3718)[0m [NCCL] World size: 2
+[36m(head, rank=0, pid=3718)[0m [NCCL] Backend: nccl
+[36m(head, rank=0, pid=3718)[0m [NCCL] Master addr: 10.0.44.87
+[36m(head, rank=0, pid=3718)[0m [NCCL] Master port: 29500
+[36m(head, rank=0, pid=3718)[0m [Rank 0] Loading model: facebook/opt-2.7b
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m [Rank 1] Loading model: facebook/opt-2.7b
+[36m(head, rank=0, pid=3718)[0m Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[36m(head, rank=0, pid=3718)[0m /usr/local/lib/python3.12/dist-packages/transformers/models/gpt2/tokenization_gpt2.py:110: DeprecationWarning: Deprecated in 0.9.0: BPE.__init__ will not create from files anymore, try `BPE.from_file` instead
+[36m(head, rank=0, pid=3718)[0m   BPE(
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m /usr/local/lib/python3.12/dist-packages/transformers/models/gpt2/tokenization_gpt2.py:110: DeprecationWarning: Deprecated in 0.9.0: BPE.__init__ will not create from files anymore, try `BPE.from_file` instead
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m   BPE(
+[36m(head, rank=0, pid=3718)[0m 
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 517/517 [00:00<00:00, 62859.24it/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 517/517 [00:00<00:00, 58856.64it/s]
+[36m(head, rank=0, pid=3718)[0m 
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 648367.51 examples/s]
+[36m(head, rank=0, pid=3718)[0m 
+Generating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 1282521.42 examples/s]
+[36m(head, rank=0, pid=3718)[0m 
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
+Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 977656.87 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 630367.86 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Generating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 1320572.23 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]
+Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 971214.62 examples/s]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:   0%|          | 0/36718 [00:00<?, ? examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:   3%|▎         | 1000/36718 [00:00<00:04, 7846.52 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:   5%|▌         | 2000/36718 [00:00<00:04, 7674.89 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:   0%|          | 0/36718 [00:00<?, ? examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:   8%|▊         | 3000/36718 [00:00<00:04, 8205.53 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:   3%|▎         | 1000/36718 [00:00<00:04, 7917.28 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  11%|█         | 4000/36718 [00:00<00:03, 8395.55 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:   5%|▌         | 2000/36718 [00:00<00:04, 7816.30 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  16%|█▋        | 6000/36718 [00:00<00:03, 9166.15 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:   8%|▊         | 3000/36718 [00:00<00:04, 8374.46 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  11%|█         | 4000/36718 [00:00<00:03, 8339.65 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  19%|█▉        | 7000/36718 [00:00<00:03, 8588.42 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  14%|█▎        | 5000/36718 [00:00<00:03, 8845.04 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  22%|██▏       | 8000/36718 [00:00<00:03, 8496.89 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  16%|█▋        | 6000/36718 [00:00<00:03, 9144.80 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  25%|██▍       | 9000/36718 [00:01<00:03, 8546.44 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  27%|██▋       | 10000/36718 [00:01<00:03, 8572.82 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  19%|█▉        | 7000/36718 [00:00<00:03, 8500.98 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  30%|██▉       | 11000/36718 [00:01<00:03, 8488.14 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  22%|██▏       | 8000/36718 [00:00<00:03, 8409.35 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  33%|███▎      | 12000/36718 [00:01<00:02, 8555.46 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  25%|██▍       | 9000/36718 [00:01<00:03, 8526.19 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  35%|███▌      | 13000/36718 [00:01<00:02, 8482.26 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  27%|██▋       | 10000/36718 [00:01<00:03, 8729.28 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  30%|██▉       | 11000/36718 [00:01<00:02, 8586.01 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  38%|███▊      | 14000/36718 [00:01<00:02, 8602.15 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  33%|███▎      | 12000/36718 [00:01<00:02, 8666.96 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  41%|████      | 15000/36718 [00:01<00:02, 8718.39 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  35%|███▌      | 13000/36718 [00:01<00:02, 8547.92 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  44%|████▎     | 16000/36718 [00:01<00:02, 8425.60 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  38%|███▊      | 14000/36718 [00:01<00:02, 8692.87 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  46%|████▋     | 17000/36718 [00:01<00:02, 8472.74 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  49%|████▉     | 18000/36718 [00:02<00:02, 8624.07 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  41%|████      | 15000/36718 [00:01<00:02, 8847.83 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  52%|█████▏    | 19000/36718 [00:02<00:02, 8822.12 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  44%|███���▎     | 16000/36718 [00:01<00:02, 8475.17 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  54%|█████▍    | 20000/36718 [00:02<00:01, 8888.89 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  46%|████▋     | 17000/36718 [00:01<00:02, 8448.20 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  49%|████▉     | 18000/36718 [00:02<00:02, 8561.08 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  57%|█████▋    | 21000/36718 [00:02<00:01, 8712.82 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  52%|█████▏    | 19000/36718 [00:02<00:02, 8843.58 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  60%|█████▉    | 22000/36718 [00:02<00:01, 8562.49 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  54%|█████▍    | 20000/36718 [00:02<00:01, 8989.15 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  57%|█████▋    | 21000/36718 [00:02<00:01, 8852.42 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  63%|██████▎   | 23000/36718 [00:02<00:01, 8782.90 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  60%|█████▉    | 22000/36718 [00:02<00:01, 8693.73 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  68%|██████▊   | 25000/36718 [00:02<00:01, 9303.11 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  71%|███████   | 26000/36718 [00:02<00:01, 9203.00 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  63%|██████▎   | 23000/36718 [00:02<00:01, 8941.07 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  74%|███████▎  | 27000/36718 [00:03<00:01, 8838.87 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  76%|███████▋  | 28000/36718 [00:03<00:01, 8648.22 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  68%|██████▊   | 25000/36718 [00:02<00:01, 9467.53 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  79%|███████▉  | 29000/36718 [00:03<00:00, 8935.44 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  71%|███████   | 26000/36718 [00:02<00:01, 9219.74 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  74%|███████▎  | 27000/36718 [00:03<00:01, 8836.80 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  82%|████████▏ | 30000/36718 [00:03<00:00, 8944.09 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  76%|███████▋  | 28000/36718 [00:03<00:00, 8731.75 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  82%|████████▏ | 30000/36718 [00:03<00:00, 9054.67 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  84%|████████▍ | 31000/36718 [00:03<00:00, 8406.68 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  87%|████████▋ | 32000/36718 [00:03<00:00, 5736.94 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  90%|████████▉ | 33000/36718 [00:04<00:00, 6224.46 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  93%|█████████▎| 34000/36718 [00:04<00:00, 6698.20 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  84%|████████▍ | 31000/36718 [00:03<00:00, 8562.00 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  87%|████████▋ | 32000/36718 [00:03<00:00, 5825.80 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing train dataset:  95%|█████████▌| 35000/36718 [00:04<00:00, 7284.58 examples/s]
+Tokenizing train dataset:  98%|█████████▊| 36000/36718 [00:04<00:00, 7504.10 examples/s]
+Tokenizing train dataset: 100%|██████████| 36718/36718 [00:04<00:00, 8214.33 examples/s]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  90%|████████▉ | 33000/36718 [00:04<00:00, 6333.23 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  93%|█████████▎| 34000/36718 [00:04<00:00, 6822.67 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:   0%|          | 0/23767 [00:00<?, ? examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  95%|█████████▌| 35000/36718 [00:04<00:00, 7412.11 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:   8%|▊         | 2000/23767 [00:00<00:01, 13767.84 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing train dataset:  98%|█████████▊| 36000/36718 [00:04<00:00, 7750.75 examples/s]
+Tokenizing train dataset: 100%|██████████| 36718/36718 [00:04<00:00, 8275.79 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:   0%|          | 0/23767 [00:00<?, ? examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  17%|█▋        | 4000/23767 [00:00<00:01, 14378.70 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  25%|██▌       | 6000/23767 [00:00<00:01, 13731.30 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:   8%|▊         | 2000/23767 [00:00<00:01, 14673.22 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  17%|█▋        | 4000/23767 [00:00<00:01, 15209.11 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  34%|███▎      | 8000/23767 [00:00<00:01, 13745.98 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  25%|██▌       | 6000/23767 [00:00<00:01, 14635.95 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  42%|████▏     | 10000/23767 [00:00<00:01, 13693.96 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  34%|███▎      | 8000/23767 [00:00<00:01, 14632.04 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  50%|█████     | 12000/23767 [00:00<00:00, 13617.20 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  42%|████▏     | 10000/23767 [00:00<00:00, 14414.51 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  59%|█████▉    | 14000/23767 [00:01<00:00, 13729.82 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  67%|██████▋   | 16000/23767 [00:01<00:00, 14087.79 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  50%|█████     | 12000/23767 [00:00<00:00, 14041.25 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  59%|█████▉    | 14000/23767 [00:00<00:00, 13939.50 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  76%|███████▌  | 18000/23767 [00:01<00:00, 13735.49 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  84%|████████▍ | 20000/23767 [00:01<00:00, 13910.34 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  67%|██████▋   | 16000/23767 [00:01<00:00, 14340.83 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  76%|███████▌  | 18000/23767 [00:01<00:00, 13921.89 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing tokens into 512-token blocks:  93%|█████████▎| 22000/23767 [00:01<00:00, 13655.64 examples/s]
+Packing tokens into 512-token blocks: 100%|██████████| 23767/23767 [00:01<00:00, 13655.39 examples/s]
+Packing tokens into 512-token blocks: 100%|██████████| 23767/23767 [00:01<00:00, 13735.27 examples/s]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  84%|████████▍ | 20000/23767 [00:01<00:00, 14092.12 examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing validation dataset:   0%|          | 0/3760 [00:00<?, ? examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing validation dataset:  27%|██▋       | 1000/3760 [00:00<00:00, 9244.48 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing tokens into 512-token blocks:  93%|█████████▎| 22000/23767 [00:01<00:00, 13913.25 examples/s]
+Packing tokens into 512-token blocks: 100%|██████████| 23767/23767 [00:01<00:00, 13974.28 examples/s]
+Packing tokens into 512-token blocks: 100%|██████████| 23767/23767 [00:01<00:00, 14119.13 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+[36m(head, rank=0, pid=3718)[0m Tokenizing validation dataset:  53%|█████▎    | 2000/3760 [00:00<00:00, 8267.48 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing validation dataset:   0%|          | 0/3760 [00:00<?, ? examples/s]
+[36m(head, rank=0, pid=3718)[0m Tokenizing validation dataset:  80%|███████▉  | 3000/3760 [00:00<00:00, 8118.88 examples/s]
+Tokenizing validation dataset: 100%|██████████| 3760/3760 [00:00<00:00, 8270.33 examples/s]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing validation dataset:  27%|██▋       | 1000/3760 [00:00<00:00, 9489.18 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing validation dataset:  53%|█████▎    | 2000/3760 [00:00<00:00, 8505.03 examples/s]
+[36m(head, rank=0, pid=3718)[0m Packing validation tokens into 512-token blocks:   0%|          | 0/2461 [00:00<?, ? examples/s]
+Packing validation tokens into 512-token blocks:  81%|████████▏ | 2000/2461 [00:00<00:00, 13576.61 examples/s]
+Packing validation tokens into 512-token blocks: 100%|██████████| 2461/2461 [00:00<00:00, 13402.86 examples/s]
+[36m(head, rank=0, pid=3718)[0m [transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Tokenizing validation dataset:  80%|███████▉  | 3000/3760 [00:00<00:00, 8387.47 examples/s]
+Tokenizing validation dataset: 100%|██████████| 3760/3760 [00:00<00:00, 8507.00 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m 
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO cudaDriverVersion 13010
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NCCL version 2.28.9+cuda13.0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m Packing validation tokens into 512-token blocks:   0%|          | 0/2461 [00:00<?, ? examples/s]
+Packing validation tokens into 512-token blocks:  81%|████████▏ | 2000/2461 [00:00<00:00, 13921.66 examples/s]
+Packing validation tokens into 512-token blocks: 100%|██████████| 2461/2461 [00:00<00:00, 13697.33 examples/s]
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m [transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v11 (v11)
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/Plugin: Loaded collnet plugin SHARP (v11)
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Successfully loaded external network plugin /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Plugin Path : /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO P2P plugin v11 IBext_v11
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/IB : No device found.
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/IB : Using [RO]; OOB eth0:10.0.44.87<0>
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Failed to initialize NET plugin IBext_v11
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/IB : No device found.
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/IB : Using [RO]; OOB eth0:10.0.44.87<0>
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Failed to initialize NET plugin IB
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/Socket : Using [0]eth0:10.0.44.87<0>
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Initialized NET plugin Socket
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Assigned NET plugin Socket to comm
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Using network Socket
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO ncclCommInitRankConfig comm 0x31da5290 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 8d000 commId 0x7d3c93da19fc5cb - Init START
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO cudaDriverVersion 13010
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NCCL version 2.28.9+cuda13.0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/Plugin: Loaded net plugin NCCL RDMA Plugin v11 (v11)
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/Plugin: Loaded collnet plugin SHARP (v11)
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Successfully loaded external network plugin /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Plugin Path : /opt/hpcx/nccl_rdma_sharp_plugin/lib/libnccl-net.so
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO P2P plugin v11 IBext_v11
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/IB : No device found.
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/IB : Using [RO]; OOB eth0:10.16.3.211<0>
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Failed to initialize NET plugin IBext_v11
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/IB : No device found.
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/IB : Using [RO]; OOB eth0:10.16.3.211<0>
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Failed to initialize NET plugin IB
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/Socket : Using [0]eth0:10.16.3.211<0>
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Initialized NET plugin Socket
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Assigned NET plugin Socket to comm
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Using network Socket
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO ncclCommInitRankConfig comm 0x2de8c590 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 8d000 commId 0x7d3c93da19fc5cb - Init START
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO RAS client listening socket at ::1<28028>
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO RAS client listening socket at ::1<28028>
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is 0-15. (GPU affinity = 0-15 ; CPU affinity = 0-15).
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO comm 0x31da5290 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Channel 00/02 : 0 1
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Channel 01/02 : 0 1
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO P2P Chunksize set to 131072
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45363 [0] NCCL INFO [Proxy Service] Device 0 CPU core 12
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45364 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 10
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO CC Off, workFifoBytes 1048576
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO ncclCommInitRankConfig comm 0x31da5290 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 8d000 commId 0x7d3c93da19fc5cb - Init COMPLETE
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 2 total 0.61 (kernels 0.29, alloc 0.00, bootstrap 0.31, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eth0'
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is 0-15. (GPU affinity = 0-15 ; CPU affinity = 0-15).
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO comm 0x2de8c590 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO P2P Chunksize set to 131072
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37107 [0] NCCL INFO [Proxy Service] Device 0 CPU core 10
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37108 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 5
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO ncclCommInitRankConfig comm 0x2de8c590 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 8d000 commId 0x7d3c93da19fc5cb - Init COMPLETE
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 2 total 0.29 (kernels 0.28, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.00, graphs 0.00, connections 0.00, rest 0.00)
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37107 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37109 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 15
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f4ad800e0a0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37107 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f4ad800e118
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37107 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f4ad800e190
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:37107 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f4ad800e208
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45363 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45395 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77e09000e0a0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45363 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77e09000e118
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45363 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77e09000e190
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:45363 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x77e09000e208
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/500 [00:00<?, ?it/s]
+[36m(head, rank=0, pid=3718)[0m   0%|          | 1/500 [00:06<56:19,  6.77s/it]
+[36m(head, rank=0, pid=3718)[0m   0%|          | 2/500 [00:12<49:32,  5.97s/it]
+[36m(head, rank=0, pid=3718)[0m   1%|          | 3/500 [00:17<47:30,  5.74s/it]
+[36m(head, rank=0, pid=3718)[0m   1%|          | 4/500 [00:22<45:54,  5.55s/it]
+[36m(head, rank=0, pid=3718)[0m   1%|          | 5/500 [00:28<44:56,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m   1%|          | 6/500 [00:33<44:25,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m   1%|▏         | 7/500 [00:39<45:09,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m   2%|▏         | 8/500 [00:44<44:58,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m   2%|▏         | 9/500 [00:50<44:48,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m   2%|▏         | 10/500 [00:55<45:13,  5.54s/it]
+                                                
+{'loss': '3.493', 'grad_norm': '340.5', 'learning_rate': '7.2e-07', 'epoch': '0.01678'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   2%|▏         | 10/500 [00:55<45:13,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m   2%|▏         | 11/500 [01:01<44:31,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m   2%|▏         | 12/500 [01:06<44:32,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m   3%|▎         | 13/500 [01:11<44:14,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m   3%|▎         | 14/500 [01:17<43:48,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m   3%|▎         | 15/500 [01:22<43:27,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m   3%|▎         | 16/500 [01:27<43:24,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m   3%|▎         | 17/500 [01:33<43:16,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m   4%|▎         | 18/500 [01:38<43:01,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   4%|▍         | 19/500 [01:43<42:47,  5.34s/it]
+  4%|▍         | 20/500 [01:49<42:52,  5.36s/it]
+                                                
+{'loss': '8.89', 'grad_norm': '58.41', 'learning_rate': '1.52e-06', 'epoch': '0.03356'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   4%|▍         | 20/500 [01:49<42:52,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   4%|▍         | 21/500 [01:54<42:42,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m   4%|▍         | 22/500 [02:00<42:49,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m   5%|▍         | 23/500 [02:05<42:36,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   5%|▍         | 24/500 [02:10<42:19,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m   5%|▌         | 25/500 [02:16<42:29,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m   5%|▌         | 26/500 [02:21<42:21,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   5%|▌         | 27/500 [02:27<42:47,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m   6%|▌         | 28/500 [02:32<42:42,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m   6%|▌         | 29/500 [02:37<42:33,  5.42s/it]
+  6%|▌         | 30/500 [02:43<42:25,  5.42s/it]
+                                                
+{'loss': '12.16', 'grad_norm': '13.44', 'learning_rate': '2e-06', 'epoch': '0.05034'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   6%|▌         | 30/500 [02:43<42:25,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m   6%|▌         | 31/500 [02:48<42:15,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m   6%|▋         | 32/500 [02:54<42:09,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m   7%|▋         | 33/500 [02:59<41:38,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m   7%|▋         | 34/500 [03:04<41:27,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m   7%|▋         | 35/500 [03:10<41:30,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   7%|▋         | 36/500 [03:15<41:29,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   7%|▋         | 37/500 [03:20<41:19,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 38/500 [03:26<41:23,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 39/500 [03:31<41:07,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 40/500 [03:36<41:00,  5.35s/it]
+                                                
+{'loss': '10.44', 'grad_norm': '23.59', 'learning_rate': '1.996e-06', 'epoch': '0.06711'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 40/500 [03:36<41:00,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 41/500 [03:42<41:07,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 42/500 [03:47<41:08,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m   9%|▊         | 43/500 [03:52<40:31,  5.32s/it]
+[36m(head, rank=0, pid=3718)[0m   9%|▉         | 44/500 [03:58<40:46,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m   9%|▉         | 45/500 [04:03<40:57,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m   9%|▉         | 46/500 [04:09<40:50,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m   9%|▉         | 47/500 [04:14<40:45,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  10%|▉         | 48/500 [04:19<40:16,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m  10%|▉         | 49/500 [04:24<39:49,  5.30s/it]
+ 10%|█         | 50/500 [04:30<39:33,  5.27s/it]
+                                                
+{'loss': '9.314', 'grad_norm': '12.1', 'learning_rate': '1.987e-06', 'epoch': '0.08389'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  10%|█         | 50/500 [04:30<39:33,  5.27s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   6%|▋         | 4/63 [00:00<00:01, 37.14it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  13%|█▎        | 8/63 [00:00<00:01, 32.85it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  19%|█▉        | 12/63 [00:00<00:01, 31.87it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  25%|██▌       | 16/63 [00:00<00:01, 31.28it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  32%|███▏      | 20/63 [00:00<00:01, 31.03it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  38%|███▊      | 24/63 [00:00<00:01, 30.85it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  44%|████▍     | 28/63 [00:00<00:01, 30.86it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  51%|█████     | 32/63 [00:01<00:01, 30.75it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  57%|█████▋    | 36/63 [00:01<00:00, 30.80it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  63%|██████▎   | 40/63 [00:01<00:00, 30.71it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  70%|██████▉   | 44/63 [00:01<00:00, 30.63it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  76%|███████▌  | 48/63 [00:01<00:00, 30.71it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  83%|████████▎ | 52/63 [00:01<00:00, 30.76it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  89%|████████▉ | 56/63 [00:01<00:00, 30.72it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  95%|█████████▌| 60/63 [00:01<00:00, 30.69it/s][A
+                                                
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '9.476', 'eval_runtime': '2.762', 'eval_samples_per_second': '182.5', 'eval_steps_per_second': '22.81', 'epoch': '0.08389'}
+[36m(head, rank=0, pid=3718)[0m 
+ 10%|█         | 50/500 [04:32<39:33,  5.27s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.69it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  10%|█         | 51/500 [04:38<46:01,  6.15s/it]
+[36m(head, rank=0, pid=3718)[0m  10%|█         | 52/500 [04:43<44:13,  5.92s/it]
+[36m(head, rank=0, pid=3718)[0m  11%|█         | 53/500 [04:49<43:00,  5.77s/it]
+[36m(head, rank=0, pid=3718)[0m  11%|█         | 54/500 [04:54<42:08,  5.67s/it]
+[36m(head, rank=0, pid=3718)[0m  11%|█         | 55/500 [05:00<41:43,  5.63s/it]
+[36m(head, rank=0, pid=3718)[0m  11%|█         | 56/500 [05:05<41:15,  5.57s/it]
+[36m(head, rank=0, pid=3718)[0m  11%|█▏        | 57/500 [05:11<41:16,  5.59s/it]
+[36m(head, rank=0, pid=3718)[0m  12%|█▏        | 58/500 [05:16<41:07,  5.58s/it]
+[36m(head, rank=0, pid=3718)[0m  12%|█▏        | 59/500 [05:22<40:56,  5.57s/it]
+ 12%|█▏        | 60/500 [05:27<40:33,  5.53s/it]
+                                                
+{'loss': '11.22', 'grad_norm': '44.16', 'learning_rate': '1.975e-06', 'epoch': '0.1007'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  12%|█▏        | 60/500 [05:27<40:33,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  12%|█▏        | 61/500 [05:33<40:26,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  12%|█▏        | 62/500 [05:38<39:55,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  13%|█▎        | 63/500 [05:44<39:40,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  13%|█▎        | 64/500 [05:49<39:54,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  13%|█▎        | 65/500 [05:54<39:29,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  13%|█▎        | 66/500 [06:00<39:22,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  13%|█▎        | 67/500 [06:05<39:35,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  14%|█▎        | 68/500 [06:11<39:17,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 69/500 [06:16<39:00,  5.43s/it]
+ 14%|█▍        | 70/500 [06:22<38:52,  5.42s/it]
+                                                
+{'loss': '12.05', 'grad_norm': '21.11', 'learning_rate': '1.958e-06', 'epoch': '0.1174'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 70/500 [06:22<38:52,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 71/500 [06:27<38:59,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 72/500 [06:33<38:51,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  15%|█▍        | 73/500 [06:38<38:43,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  15%|█▍        | 74/500 [06:43<38:28,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  15%|█▌        | 75/500 [06:49<38:20,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  15%|█▌        | 76/500 [06:54<38:06,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  15%|█▌        | 77/500 [06:59<37:40,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m  16%|█▌        | 78/500 [07:05<38:08,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  16%|█▌        | 79/500 [07:10<38:03,  5.42s/it]
+ 16%|█▌        | 80/500 [07:16<37:47,  5.40s/it]
+                                                
+{'loss': '14.64', 'grad_norm': '50.5', 'learning_rate': '1.937e-06', 'epoch': '0.1342'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  16%|█▌        | 80/500 [07:16<37:47,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  16%|█▌        | 81/500 [07:21<37:31,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  16%|█▋        | 82/500 [07:27<37:34,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  17%|█▋        | 83/500 [07:32<37:27,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  17%|█▋        | 84/500 [07:37<37:14,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  17%|█▋        | 85/500 [07:43<37:15,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  17%|█▋        | 86/500 [07:48<37:02,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  17%|█▋        | 87/500 [07:53<36:42,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m  18%|█▊        | 88/500 [07:59<36:40,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m  18%|█▊        | 89/500 [08:04<36:40,  5.35s/it]
+ 18%|█▊        | 90/500 [08:09<36:48,  5.39s/it]
+                                                
+{'loss': '41.91', 'grad_norm': '49.12', 'learning_rate': '1.912e-06', 'epoch': '0.151'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  18%|█▊        | 90/500 [08:09<36:48,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  18%|█▊        | 91/500 [08:15<36:54,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  18%|█▊        | 92/500 [08:20<36:56,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  19%|█▊        | 93/500 [08:26<36:25,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  19%|█▉        | 94/500 [08:31<36:35,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  19%|█▉        | 95/500 [08:37<36:29,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  19%|█▉        | 96/500 [08:42<36:20,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  19%|█▉        | 97/500 [08:47<36:18,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  20%|█▉        | 98/500 [08:53<36:19,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  20%|█▉        | 99/500 [08:58<36:19,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  20%|██        | 100/500 [09:04<36:19,  5.45s/it]
+                                                 
+{'loss': '38.84', 'grad_norm': '50.22', 'learning_rate': '1.883e-06', 'epoch': '0.1678'}
+[36m(head, rank=0, pid=3718)[0m 
+ 20%|██        | 100/500 [09:04<36:19,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 41.96it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  16%|█▌        | 10/63 [00:00<00:01, 34.53it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 14/63 [00:00<00:01, 32.88it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  29%|██▊       | 18/63 [00:00<00:01, 32.05it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  35%|███▍      | 22/63 [00:00<00:01, 31.54it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  41%|████▏     | 26/63 [00:00<00:01, 31.18it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 30/63 [00:00<00:01, 30.96it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  54%|█████▍    | 34/63 [00:01<00:00, 30.82it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  60%|██████    | 38/63 [00:01<00:00, 30.82it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 42/63 [00:01<00:00, 30.72it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 46/63 [00:01<00:00, 30.73it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  79%|███████▉  | 50/63 [00:01<00:00, 30.80it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 54/63 [00:01<00:00, 30.70it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 58/63 [00:01<00:00, 30.77it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+ 98%|█████████▊| 62/63 [00:01<00:00, 30.80it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '32.73', 'eval_runtime': '2.08', 'eval_samples_per_second': '242.3', 'eval_steps_per_second': '30.28', 'epoch': '0.1678'}
+[36m(head, rank=0, pid=3718)[0m 
+ 20%|██        | 100/500 [09:06<36:19,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.80it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  20%|██        | 101/500 [09:11<40:21,  6.07s/it]
+[36m(head, rank=0, pid=3718)[0m  20%|██        | 102/500 [09:17<39:16,  5.92s/it]
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 103/500 [09:22<38:18,  5.79s/it]
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 104/500 [09:28<37:32,  5.69s/it]
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 105/500 [09:33<36:43,  5.58s/it]
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 106/500 [09:38<36:18,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  21%|██▏       | 107/500 [09:44<35:59,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 108/500 [09:49<35:20,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 109/500 [09:55<35:13,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 110/500 [10:00<35:05,  5.40s/it]
+                                                 
+{'loss': '29.33', 'grad_norm': '11.54', 'learning_rate': '1.85e-06', 'epoch': '0.1846'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 110/500 [10:00<35:05,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 111/500 [10:05<34:30,  5.32s/it]
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 112/500 [10:10<34:38,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  23%|██▎       | 113/500 [10:16<34:41,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  23%|██▎       | 114/500 [10:21<34:18,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m  23%|██▎       | 115/500 [10:26<33:58,  5.29s/it]
+[36m(head, rank=0, pid=3718)[0m  23%|██▎       | 116/500 [10:32<34:20,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  23%|██▎       | 117/500 [10:37<34:40,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  24%|██▎       | 118/500 [10:43<34:34,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  24%|██▍       | 119/500 [10:49<34:56,  5.50s/it]
+ 24%|██▍       | 120/500 [10:54<34:46,  5.49s/it]
+                                                 
+{'loss': '33.77', 'grad_norm': '77.31', 'learning_rate': '1.813e-06', 'epoch': '0.2013'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  24%|██▍       | 120/500 [10:54<34:46,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  24%|██▍       | 121/500 [10:59<34:28,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  24%|██▍       | 122/500 [11:05<34:12,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  25%|██▍       | 123/500 [11:10<34:07,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  25%|██▍       | 124/500 [11:16<34:15,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  25%|██▌       | 125/500 [11:21<34:05,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  25%|██▌       | 126/500 [11:26<33:42,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  25%|██▌       | 127/500 [11:32<33:37,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  26%|██▌       | 128/500 [11:37<33:46,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  26%|██▌       | 129/500 [11:43<33:34,  5.43s/it]
+ 26%|██▌       | 130/500 [11:48<33:16,  5.40s/it]
+                                                 
+{'loss': '32.79', 'grad_norm': '30.09', 'learning_rate': '1.773e-06', 'epoch': '0.2181'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  26%|██▌       | 130/500 [11:48<33:16,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  26%|██▌       | 131/500 [11:54<33:12,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  26%|██▋       | 132/500 [11:59<33:04,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 133/500 [12:04<33:04,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 134/500 [12:10<33:17,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 135/500 [12:15<33:10,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 136/500 [12:21<32:57,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 137/500 [12:26<32:42,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  28%|██▊       | 138/500 [12:32<32:41,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  28%|██▊       | 139/500 [12:37<32:31,  5.41s/it]
+ 28%|██▊       | 140/500 [12:42<32:31,  5.42s/it]
+                                                 
+{'loss': '31.3', 'grad_norm': '19.95', 'learning_rate': '1.729e-06', 'epoch': '0.2349'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  28%|██▊       | 140/500 [12:42<32:31,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  28%|██▊       | 141/500 [12:48<32:33,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  28%|██▊       | 142/500 [12:53<32:24,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  29%|██▊       | 143/500 [12:59<32:28,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  29%|██▉       | 144/500 [13:04<32:22,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  29%|██▉       | 145/500 [13:10<32:38,  5.52s/it]
+[36m(head, rank=0, pid=3718)[0m  29%|██▉       | 146/500 [13:15<32:29,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  29%|██▉       | 147/500 [13:21<32:18,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  30%|██▉       | 148/500 [13:26<31:40,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  30%|██▉       | 149/500 [13:31<31:22,  5.36s/it]
+ 30%|███       | 150/500 [13:37<31:06,  5.33s/it]
+                                                 
+{'loss': '30.38', 'grad_norm': '63.59', 'learning_rate': '1.682e-06', 'epoch': '0.2517'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  30%|███       | 150/500 [13:37<31:06,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 40.37it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  16%|█▌        | 10/63 [00:00<00:01, 33.97it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  22%|██▏       | 14/63 [00:00<00:01, 32.60it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  29%|██▊       | 18/63 [00:00<00:01, 31.87it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  35%|███▍      | 22/63 [00:00<00:01, 31.35it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  41%|████▏     | 26/63 [00:00<00:01, 31.05it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 30/63 [00:00<00:01, 30.97it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  54%|█████▍    | 34/63 [00:01<00:00, 30.80it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  60%|██████    | 38/63 [00:01<00:00, 30.79it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 42/63 [00:01<00:00, 30.66it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 46/63 [00:01<00:00, 30.70it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  79%|███████▉  | 50/63 [00:01<00:00, 30.76it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 54/63 [00:01<00:00, 30.74it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 58/63 [00:01<00:00, 30.71it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  98%|█████████▊| 62/63 [00:01<00:00, 30.77it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '28.9', 'eval_runtime': '2.075', 'eval_samples_per_second': '242.9', 'eval_steps_per_second': '30.36', 'epoch': '0.2517'}
+[36m(head, rank=0, pid=3718)[0m 
+ 30%|███       | 150/500 [13:39<31:06,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.77it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  30%|███       | 151/500 [13:44<34:38,  5.96s/it]
+[36m(head, rank=0, pid=3718)[0m  30%|███       | 152/500 [13:50<33:58,  5.86s/it]
+[36m(head, rank=0, pid=3718)[0m  31%|███       | 153/500 [13:55<33:13,  5.75s/it]
+[36m(head, rank=0, pid=3718)[0m  31%|███       | 154/500 [14:01<32:50,  5.70s/it]
+[36m(head, rank=0, pid=3718)[0m  31%|███       | 155/500 [14:06<32:10,  5.60s/it]
+[36m(head, rank=0, pid=3718)[0m  31%|███       | 156/500 [14:11<31:51,  5.56s/it]
+[36m(head, rank=0, pid=3718)[0m  31%|███▏      | 157/500 [14:17<31:24,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  32%|███▏      | 158/500 [14:22<31:15,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  32%|███▏      | 159/500 [14:28<31:12,  5.49s/it]
+ 32%|███▏      | 160/500 [14:33<30:50,  5.44s/it]
+                                                 
+{'loss': '26.98', 'grad_norm': '19.75', 'learning_rate': '1.632e-06', 'epoch': '0.2685'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  32%|███▏      | 160/500 [14:33<30:50,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  32%|███▏      | 161/500 [14:38<30:24,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  32%|███▏      | 162/500 [14:44<30:18,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 163/500 [14:49<30:10,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 164/500 [14:54<29:46,  5.32s/it]
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 165/500 [15:00<29:53,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 166/500 [15:05<29:58,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 167/500 [15:10<29:44,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  34%|███▎      | 168/500 [15:16<29:48,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  34%|███▍      | 169/500 [15:21<29:56,  5.43s/it]
+ 34%|███▍      | 170/500 [15:27<29:47,  5.42s/it]
+                                                 
+{'loss': '24.5', 'grad_norm': '20.27', 'learning_rate': '1.58e-06', 'epoch': '0.2852'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  34%|███▍      | 170/500 [15:27<29:47,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  34%|███▍      | 171/500 [15:32<29:45,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  34%|███▍      | 172/500 [15:38<29:39,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  35%|███▍      | 173/500 [15:43<29:27,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  35%|███▍      | 174/500 [15:49<29:30,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  35%|███▌      | 175/500 [15:54<29:33,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  35%|███▌      | 176/500 [15:59<29:13,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  35%|███▌      | 177/500 [16:05<28:58,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  36%|███▌      | 178/500 [16:10<29:02,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  36%|███▌      | 179/500 [16:15<28:44,  5.37s/it]
+ 36%|███▌      | 180/500 [16:21<28:40,  5.38s/it]
+                                                 
+{'loss': '23.46', 'grad_norm': '56.09', 'learning_rate': '1.525e-06', 'epoch': '0.302'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  36%|███▌      | 180/500 [16:21<28:40,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  36%|███▌      | 181/500 [16:26<28:25,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m  36%|███▋      | 182/500 [16:31<28:14,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m  37%|███▋      | 183/500 [16:37<28:26,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  37%|███▋      | 184/500 [16:42<28:24,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  37%|███▋      | 185/500 [16:48<28:17,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  37%|███▋      | 186/500 [16:53<28:37,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  37%|███▋      | 187/500 [16:59<28:26,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  38%|███▊      | 188/500 [17:04<28:12,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  38%|███▊      | 189/500 [17:10<28:11,  5.44s/it]
+ 38%|███▊      | 190/500 [17:15<28:11,  5.46s/it]
+                                                 
+{'loss': '25.17', 'grad_norm': '32.44', 'learning_rate': '1.467e-06', 'epoch': '0.3188'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  38%|███▊      | 190/500 [17:15<28:11,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  38%|███▊      | 191/500 [17:20<27:36,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  38%|███▊      | 192/500 [17:26<27:25,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m  39%|███▊      | 193/500 [17:31<27:36,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  39%|███▉      | 194/500 [17:36<27:22,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  39%|███▉      | 195/500 [17:42<27:27,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  39%|███▉      | 196/500 [17:47<27:37,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  39%|███▉      | 197/500 [17:53<27:27,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 198/500 [17:58<27:15,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 199/500 [18:04<27:22,  5.46s/it]
+ 40%|████      | 200/500 [18:09<27:15,  5.45s/it]
+                                                 
+{'loss': '24.5', 'grad_norm': '25.3', 'learning_rate': '1.408e-06', 'epoch': '0.3356'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|████      | 200/500 [18:09<27:15,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 39.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 34.14it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.44it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.66it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 31.19it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 30.93it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.78it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.74it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.63it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.56it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.64it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.66it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.70it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '21.87', 'eval_runtime': '2.083', 'eval_samples_per_second': '242', 'eval_steps_per_second': '30.25', 'epoch': '0.3356'}
+[36m(head, rank=0, pid=3718)[0m 
+ 40%|████      | 200/500 [18:11<27:15,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.70it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  40%|████      | 201/500 [18:17<30:08,  6.05s/it]
+[36m(head, rank=0, pid=3718)[0m  40%|████      | 202/500 [18:22<29:02,  5.85s/it]
+[36m(head, rank=0, pid=3718)[0m  41%|████      | 203/500 [18:28<28:30,  5.76s/it]
+[36m(head, rank=0, pid=3718)[0m  41%|████      | 204/500 [18:33<27:43,  5.62s/it]
+[36m(head, rank=0, pid=3718)[0m  41%|████      | 205/500 [18:38<27:12,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  41%|████      | 206/500 [18:44<27:04,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  41%|████▏     | 207/500 [18:49<26:47,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  42%|████▏     | 208/500 [18:55<26:42,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  42%|████▏     | 209/500 [19:00<26:25,  5.45s/it]
+ 42%|████▏     | 210/500 [19:05<26:09,  5.41s/it]
+                                                 
+{'loss': '21.56', 'grad_norm': '10.71', 'learning_rate': '1.347e-06', 'epoch': '0.3523'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  42%|████▏     | 210/500 [19:05<26:09,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  42%|████▏     | 211/500 [19:11<26:20,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  42%|████▏     | 212/500 [19:16<26:01,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  43%|████▎     | 213/500 [19:22<25:50,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  43%|████▎     | 214/500 [19:27<25:52,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  43%|████▎     | 215/500 [19:32<25:42,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  43%|████▎     | 216/500 [19:38<25:28,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  43%|████▎     | 217/500 [19:43<25:43,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  44%|████▎     | 218/500 [19:49<26:04,  5.55s/it]
+[36m(head, rank=0, pid=3718)[0m  44%|████▍     | 219/500 [19:55<26:00,  5.55s/it]
+ 44%|████▍     | 220/500 [20:00<25:37,  5.49s/it]
+                                                 
+{'loss': '20.64', 'grad_norm': '31.62', 'learning_rate': '1.284e-06', 'epoch': '0.3691'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  44%|████▍     | 220/500 [20:00<25:37,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  44%|████▍     | 221/500 [20:06<25:47,  5.55s/it]
+[36m(head, rank=0, pid=3718)[0m  44%|████▍     | 222/500 [20:11<25:30,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  45%|████▍     | 223/500 [20:16<25:04,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  45%|████▍     | 224/500 [20:22<24:55,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  45%|████▌     | 225/500 [20:27<24:37,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  45%|████▌     | 226/500 [20:32<24:30,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  45%|████▌     | 227/500 [20:38<24:45,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 228/500 [20:43<24:41,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 229/500 [20:49<24:38,  5.45s/it]
+ 46%|████▌     | 230/500 [20:54<24:30,  5.45s/it]
+                                                 
+{'loss': '22.71', 'grad_norm': '35.81', 'learning_rate': '1.22e-06', 'epoch': '0.3859'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 230/500 [20:54<24:30,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 231/500 [21:00<24:43,  5.52s/it]
+[36m(head, rank=0, pid=3718)[0m  46%|████▋     | 232/500 [21:06<24:37,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  47%|████▋     | 233/500 [21:11<24:33,  5.52s/it]
+[36m(head, rank=0, pid=3718)[0m  47%|████▋     | 234/500 [21:17<24:24,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  47%|████▋     | 235/500 [21:22<24:02,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  47%|████▋     | 236/500 [21:28<24:13,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  47%|████▋     | 237/500 [21:33<24:05,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 238/500 [21:38<23:42,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 239/500 [21:44<23:41,  5.45s/it]
+ 48%|████▊     | 240/500 [21:49<23:25,  5.41s/it]
+                                                 
+{'loss': '22.34', 'grad_norm': '30.77', 'learning_rate': '1.155e-06', 'epoch': '0.4027'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 240/500 [21:49<23:25,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 241/500 [21:54<23:15,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  48%|████▊     | 242/500 [22:00<23:10,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  49%|████▊     | 243/500 [22:05<23:13,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  49%|████▉     | 244/500 [22:11<23:09,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  49%|████▉     | 245/500 [22:16<22:58,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  49%|████▉     | 246/500 [22:22<22:54,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  49%|████▉     | 247/500 [22:27<22:35,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  50%|████▉     | 248/500 [22:32<22:35,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  50%|████▉     | 249/500 [22:38<22:34,  5.40s/it]
+ 50%|█████     | 250/500 [22:43<22:27,  5.39s/it]
+                                                 
+{'loss': '20.67', 'grad_norm': '7.055', 'learning_rate': '1.089e-06', 'epoch': '0.4195'}
+[36m(head, rank=0, pid=3718)[0m 
+ 50%|█████     | 250/500 [22:43<22:27,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 38.39it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 33.45it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.21it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.35it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 31.18it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 30.81it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.78it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.65it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.46it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.49it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.63it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.56it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.61it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '19.03', 'eval_runtime': '2.091', 'eval_samples_per_second': '241', 'eval_steps_per_second': '30.12', 'epoch': '0.4195'}
+[36m(head, rank=0, pid=3718)[0m 
+ 50%|█████     | 250/500 [22:45<22:27,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.61it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+                                               [A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+Writing model shards: 100%|██████████| 1/1 [00:08<00:00,  8.92s/it][A
+Writing model shards: 100%|██████████| 1/1 [00:08<00:00,  8.93s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  50%|█████     | 251/500 [23:11<50:43, 12.22s/it]
+[36m(head, rank=0, pid=3718)[0m  50%|█████     | 252/500 [23:17<42:07, 10.19s/it]
+[36m(head, rank=0, pid=3718)[0m  51%|█████     | 253/500 [23:22<35:58,  8.74s/it]
+[36m(head, rank=0, pid=3718)[0m  51%|█████     | 254/500 [23:27<31:53,  7.78s/it]
+[36m(head, rank=0, pid=3718)[0m  51%|█████     | 255/500 [23:33<28:58,  7.10s/it]
+[36m(head, rank=0, pid=3718)[0m  51%|█████     | 256/500 [23:38<26:39,  6.55s/it]
+[36m(head, rank=0, pid=3718)[0m  51%|█████▏    | 257/500 [23:44<25:03,  6.19s/it]
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 258/500 [23:49<24:01,  5.96s/it]
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 259/500 [23:54<23:12,  5.78s/it]
+ 52%|█████▏    | 260/500 [24:00<22:47,  5.70s/it]
+                                                 
+{'loss': '20.58', 'grad_norm': '46.5', 'learning_rate': '1.023e-06', 'epoch': '0.4362'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 260/500 [24:00<22:47,  5.70s/it]
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 261/500 [24:05<22:28,  5.64s/it]
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 262/500 [24:11<22:01,  5.55s/it]
+[36m(head, rank=0, pid=3718)[0m  53%|█████▎    | 263/500 [24:16<21:53,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m  53%|█████▎    | 264/500 [24:22<21:54,  5.57s/it]
+[36m(head, rank=0, pid=3718)[0m  53%|█████▎    | 265/500 [24:27<21:40,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m  53%|█████▎    | 266/500 [24:33<21:33,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  53%|█████▎    | 267/500 [24:38<21:23,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  54%|█████▎    | 268/500 [24:44<21:14,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  54%|█████▍    | 269/500 [24:49<21:06,  5.48s/it]
+ 54%|█████▍    | 270/500 [24:55<21:01,  5.49s/it]
+                                                 
+{'loss': '22.18', 'grad_norm': '44.62', 'learning_rate': '9.57e-07', 'epoch': '0.453'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  54%|█████▍    | 270/500 [24:55<21:01,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  54%|█████▍    | 271/500 [25:00<20:54,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  54%|█████▍    | 272/500 [25:06<20:38,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  55%|█████▍    | 273/500 [25:11<20:32,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  55%|█████▍    | 274/500 [25:16<20:13,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  55%|█████▌    | 275/500 [25:22<20:06,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  55%|█████▌    | 276/500 [25:27<20:06,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  55%|█████▌    | 277/500 [25:32<19:59,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  56%|█████▌    | 278/500 [25:38<19:45,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m  56%|█████▌    | 279/500 [25:43<19:55,  5.41s/it]
+ 56%|█████▌    | 280/500 [25:49<19:51,  5.42s/it]
+                                                 
+{'loss': '20.45', 'grad_norm': '8.727', 'learning_rate': '8.911e-07', 'epoch': '0.4698'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  56%|█████▌    | 280/500 [25:49<19:51,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  56%|█████▌    | 281/500 [25:54<19:37,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  56%|█████▋    | 282/500 [25:59<19:38,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  57%|█████▋    | 283/500 [26:05<19:30,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  57%|█████▋    | 284/500 [26:10<19:21,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  57%|█████▋    | 285/500 [26:16<19:29,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  57%|█████▋    | 286/500 [26:21<19:38,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  57%|█████▋    | 287/500 [26:27<19:19,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  58%|█████▊    | 288/500 [26:32<19:14,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  58%|█████▊    | 289/500 [26:38<19:32,  5.56s/it]
+[36m(head, rank=0, pid=3718)[0m  58%|█████▊    | 290/500 [26:43<19:23,  5.54s/it]
+                                                 
+{'loss': '19.3', 'grad_norm': '8.961', 'learning_rate': '8.256e-07', 'epoch': '0.4866'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  58%|█████▊    | 290/500 [26:43<19:23,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m  58%|█████▊    | 291/500 [26:49<19:18,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m  58%|█████▊    | 292/500 [26:54<19:01,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 293/500 [27:00<18:42,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  59%|█████▉    | 294/500 [27:05<18:40,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  59%|█████▉    | 295/500 [27:11<18:39,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  59%|█████▉    | 296/500 [27:16<18:34,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  59%|█████▉    | 297/500 [27:22<18:33,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  60%|█████▉    | 298/500 [27:27<18:21,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  60%|█████▉    | 299/500 [27:32<18:02,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  60%|██████    | 300/500 [27:38<18:02,  5.41s/it]
+                                                 
+{'loss': '19.32', 'grad_norm': '41.25', 'learning_rate': '7.609e-07', 'epoch': '0.5034'}
+[36m(head, rank=0, pid=3718)[0m 
+ 60%|██████    | 300/500 [27:38<18:02,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 38.66it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 33.83it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.49it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.70it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 31.25it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 31.05it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.82it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.67it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.70it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.60it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.69it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.64it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.63it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.67it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '18.81', 'eval_runtime': '2.081', 'eval_samples_per_second': '242.2', 'eval_steps_per_second': '30.28', 'epoch': '0.5034'}
+[36m(head, rank=0, pid=3718)[0m 
+ 60%|██████    | 300/500 [27:40<18:02,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.67it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  60%|██████    | 301/500 [27:45<20:05,  6.06s/it]
+[36m(head, rank=0, pid=3718)[0m  60%|██████    | 302/500 [27:51<19:19,  5.85s/it]
+[36m(head, rank=0, pid=3718)[0m  61%|██████    | 303/500 [27:56<18:42,  5.70s/it]
+[36m(head, rank=0, pid=3718)[0m  61%|██████    | 304/500 [28:01<18:17,  5.60s/it]
+[36m(head, rank=0, pid=3718)[0m  61%|██████    | 305/500 [28:07<17:58,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  61%|██████    | 306/500 [28:12<17:35,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  61%|██████▏   | 307/500 [28:17<17:28,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  62%|██████▏   | 308/500 [28:23<17:19,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  62%|██████▏   | 309/500 [28:28<17:11,  5.40s/it]
+ 62%|██████▏   | 310/500 [28:33<17:07,  5.41s/it]
+                                                 
+{'loss': '20.98', 'grad_norm': '11.99', 'learning_rate': '6.973e-07', 'epoch': '0.5201'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  62%|██████▏   | 310/500 [28:33<17:07,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  62%|██████▏   | 311/500 [28:39<17:05,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  62%|██████▏   | 312/500 [28:44<16:53,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  63%|██████▎   | 313/500 [28:50<16:54,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  63%|██████▎   | 314/500 [28:55<16:56,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  63%|██████▎   | 315/500 [29:01<16:47,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  63%|██████▎   | 316/500 [29:06<16:39,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  63%|██████▎   | 317/500 [29:12<16:42,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  64%|██████▎   | 318/500 [29:17<16:21,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  64%|██████▍   | 319/500 [29:22<16:19,  5.41s/it]
+ 64%|██████▍   | 320/500 [29:28<16:14,  5.41s/it]
+                                                 
+{'loss': '18.98', 'grad_norm': '10.3', 'learning_rate': '6.35e-07', 'epoch': '0.5369'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  64%|██████▍   | 320/500 [29:28<16:14,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  64%|██████▍   | 321/500 [29:33<16:09,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  64%|██████▍   | 322/500 [29:39<16:03,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  65%|██████▍   | 323/500 [29:44<16:01,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  65%|██████▍   | 324/500 [29:49<15:51,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 325/500 [29:55<16:00,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 326/500 [30:00<15:50,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 327/500 [30:06<15:38,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  66%|██████▌   | 328/500 [30:11<15:30,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  66%|██████▌   | 329/500 [30:17<15:24,  5.40s/it]
+ 66%|██████▌   | 330/500 [30:22<15:08,  5.35s/it]
+                                                 
+{'loss': '18.68', 'grad_norm': '21.02', 'learning_rate': '5.742e-07', 'epoch': '0.5537'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  66%|██████▌   | 330/500 [30:22<15:08,  5.35s/it]
+[36m(head, rank=0, pid=3718)[0m  66%|██████▌   | 331/500 [30:27<15:08,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  66%|██████▋   | 332/500 [30:33<15:05,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 333/500 [30:38<14:58,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 334/500 [30:43<14:49,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 335/500 [30:49<14:51,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 336/500 [30:54<14:43,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  67%|██████▋   | 337/500 [31:00<14:35,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  68%|██████▊   | 338/500 [31:05<14:37,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  68%|██████▊   | 339/500 [31:11<14:39,  5.46s/it]
+ 68%|██████▊   | 340/500 [31:16<14:37,  5.48s/it]
+                                                 
+{'loss': '16.24', 'grad_norm': '5.512', 'learning_rate': '5.154e-07', 'epoch': '0.5705'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  68%|██████▊   | 340/500 [31:16<14:37,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  68%|██████▊   | 341/500 [31:22<14:31,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  68%|██████▊   | 342/500 [31:27<14:19,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  69%|██████▊   | 343/500 [31:32<14:08,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  69%|██████▉   | 344/500 [31:38<13:59,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  69%|██████▉   | 345/500 [31:43<13:52,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  69%|██████▉   | 346/500 [31:48<13:48,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  69%|██████▉   | 347/500 [31:54<13:37,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m  70%|██████▉   | 348/500 [31:59<13:29,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m  70%|██████▉   | 349/500 [32:04<13:30,  5.37s/it]
+ 70%|███████   | 350/500 [32:10<13:23,  5.36s/it]
+                                                 
+{'loss': '15.56', 'grad_norm': '5.75', 'learning_rate': '4.586e-07', 'epoch': '0.5872'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  70%|███████   | 350/500 [32:10<13:23,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 38.39it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 33.77it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.21it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 31.18it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 30.98it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.73it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.49it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.61it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.61it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.61it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.61it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '13.4', 'eval_runtime': '2.086', 'eval_samples_per_second': '241.6', 'eval_steps_per_second': '30.2', 'epoch': '0.5872'}
+[36m(head, rank=0, pid=3718)[0m 
+ 70%|███████   | 350/500 [32:12<13:23,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.61it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  70%|███████   | 351/500 [32:17<14:54,  6.01s/it]
+[36m(head, rank=0, pid=3718)[0m  70%|███████   | 352/500 [32:22<14:12,  5.76s/it]
+[36m(head, rank=0, pid=3718)[0m  71%|███████   | 353/500 [32:28<13:46,  5.62s/it]
+[36m(head, rank=0, pid=3718)[0m  71%|███████   | 354/500 [32:33<13:29,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m  71%|███████   | 355/500 [32:38<13:16,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  71%|███████   | 356/500 [32:44<13:08,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 357/500 [32:49<13:03,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  72%|███████▏  | 358/500 [32:55<12:52,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  72%|███████▏  | 359/500 [33:00<12:50,  5.47s/it]
+ 72%|███████▏  | 360/500 [33:06<12:44,  5.46s/it]
+                                                 
+{'loss': '14.76', 'grad_norm': '13.35', 'learning_rate': '4.042e-07', 'epoch': '0.604'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  72%|███████▏  | 360/500 [33:06<12:44,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  72%|███████▏  | 361/500 [33:11<12:29,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  72%|███████▏  | 362/500 [33:16<12:32,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 363/500 [33:22<12:28,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 364/500 [33:27<12:22,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 365/500 [33:33<12:13,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 366/500 [33:38<12:06,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  73%|███████▎  | 367/500 [33:43<11:54,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  74%|███████▎  | 368/500 [33:49<11:51,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  74%|███████▍  | 369/500 [33:54<11:48,  5.41s/it]
+ 74%|███████▍  | 370/500 [34:00<11:37,  5.37s/it]
+                                                 
+{'loss': '14.07', 'grad_norm': '5.379', 'learning_rate': '3.524e-07', 'epoch': '0.6208'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  74%|███████▍  | 370/500 [34:00<11:37,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  74%|███████���  | 371/500 [34:05<11:32,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  74%|███████▍  | 372/500 [34:10<11:31,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  75%|███████▍  | 373/500 [34:16<11:27,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  75%|███████▍  | 374/500 [34:21<11:22,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  75%|███████▌  | 375/500 [34:27<11:15,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  75%|███████▌  | 376/500 [34:32<11:12,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  75%|███████▌  | 377/500 [34:38<11:12,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  76%|███████▌  | 378/500 [34:43<11:04,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  76%|███████▌  | 379/500 [34:49<10:57,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  76%|███████▌  | 380/500 [34:54<10:51,  5.43s/it]
+                                                 
+{'loss': '13.3', 'grad_norm': '4.641', 'learning_rate': '3.035e-07', 'epoch': '0.6376'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  76%|███████▌  | 380/500 [34:54<10:51,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  76%|███████▌  | 381/500 [34:59<10:44,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  76%|███████▋  | 382/500 [35:05<10:41,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  77%|███████▋  | 383/500 [35:10<10:35,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  77%|███████▋  | 384/500 [35:16<10:28,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  77%|███████▋  | 385/500 [35:21<10:15,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  77%|███████▋  | 386/500 [35:26<10:16,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  77%|███████▋  | 387/500 [35:32<10:15,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 388/500 [35:37<10:13,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 389/500 [35:43<10:04,  5.45s/it]
+ 78%|███████▊  | 390/500 [35:48<10:05,  5.51s/it]
+                                                 
+{'loss': '13.83', 'grad_norm': '6.305', 'learning_rate': '2.576e-07', 'epoch': '0.6544'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 390/500 [35:49<10:05,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 391/500 [35:54<09:57,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 392/500 [35:59<09:47,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  79%|███████▊  | 393/500 [36:05<09:39,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  79%|███████▉  | 394/500 [36:10<09:28,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  79%|███████▉  | 395/500 [36:15<09:19,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m  79%|███████▉  | 396/500 [36:21<09:19,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  79%|███████▉  | 397/500 [36:26<09:16,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  80%|███████▉  | 398/500 [36:32<09:15,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  80%|███████▉  | 399/500 [36:37<09:08,  5.44s/it]
+ 80%|████████  | 400/500 [36:42<09:02,  5.42s/it]
+                                                 
+{'loss': '13.07', 'grad_norm': '5.684', 'learning_rate': '2.149e-07', 'epoch': '0.6711'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  80%|████████  | 400/500 [36:42<09:02,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 38.53it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 33.75it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.20it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.55it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 31.16it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 30.90it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.75it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.67it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.60it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.55it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.53it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.57it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '10.89', 'eval_runtime': '2.087', 'eval_samples_per_second': '241.5', 'eval_steps_per_second': '30.18', 'epoch': '0.6711'}
+[36m(head, rank=0, pid=3718)[0m 
+ 80%|████████  | 400/500 [36:45<09:02,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.57it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  80%|████████  | 401/500 [36:50<09:59,  6.05s/it]
+[36m(head, rank=0, pid=3718)[0m  80%|████████  | 402/500 [36:55<09:34,  5.86s/it]
+[36m(head, rank=0, pid=3718)[0m  81%|████████  | 403/500 [37:01<09:16,  5.73s/it]
+[36m(head, rank=0, pid=3718)[0m  81%|████████  | 404/500 [37:06<09:04,  5.67s/it]
+[36m(head, rank=0, pid=3718)[0m  81%|████████  | 405/500 [37:12<08:51,  5.60s/it]
+[36m(head, rank=0, pid=3718)[0m  81%|████████  | 406/500 [37:17<08:41,  5.55s/it]
+[36m(head, rank=0, pid=3718)[0m  81%|████████▏ | 407/500 [37:23<08:29,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  82%|████████▏ | 408/500 [37:28<08:22,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  82%|████████▏ | 409/500 [37:33<08:18,  5.48s/it]
+ 82%|████████▏ | 410/500 [37:39<08:13,  5.49s/it]
+                                                 
+{'loss': '12.82', 'grad_norm': '6.395', 'learning_rate': '1.757e-07', 'epoch': '0.6879'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  82%|████████▏ | 410/500 [37:39<08:13,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  82%|████████▏ | 411/500 [37:44<08:07,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  82%|████████▏ | 412/500 [37:50<08:03,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  83%|████████▎ | 413/500 [37:55<07:53,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  83%|████████▎ | 414/500 [38:01<07:43,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  83%|████████▎ | 415/500 [38:06<07:42,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  83%|████████▎ | 416/500 [38:12<07:39,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  83%|████████▎ | 417/500 [38:17<07:34,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  84%|████████▎ | 418/500 [38:23<07:30,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 419/500 [38:28<07:23,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 420/500 [38:34<07:16,  5.45s/it]
+                                                 
+{'loss': '12.85', 'grad_norm': '3.947', 'learning_rate': '1.401e-07', 'epoch': '0.7047'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 420/500 [38:34<07:16,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 421/500 [38:39<07:08,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 422/500 [38:44<07:02,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  85%|████████▍ | 423/500 [38:50<07:00,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  85%|████████▍ | 424/500 [38:55<06:57,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  85%|████████▌ | 425/500 [39:01<06:56,  5.55s/it]
+[36m(head, rank=0, pid=3718)[0m  85%|████████▌ | 426/500 [39:06<06:47,  5.51s/it]
+[36m(head, rank=0, pid=3718)[0m  85%|████████▌ | 427/500 [39:12<06:37,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 428/500 [39:17<06:29,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 429/500 [39:23<06:25,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 430/500 [39:28<06:22,  5.47s/it]
+                                                 
+{'loss': '12.47', 'grad_norm': '3.352', 'learning_rate': '1.082e-07', 'epoch': '0.7215'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 430/500 [39:28<06:22,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  86%|████████▌ | 431/500 [39:34<06:19,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  86%|████████▋ | 432/500 [39:39<06:12,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  87%|████████▋ | 433/500 [39:45<06:06,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  87%|████████▋ | 434/500 [39:50<06:00,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  87%|████████▋ | 435/500 [39:55<05:52,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  87%|████████▋ | 436/500 [40:01<05:45,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  87%|████████▋ | 437/500 [40:06<05:41,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  88%|████████▊ | 438/500 [40:11<05:32,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  88%|████████▊ | 439/500 [40:17<05:28,  5.38s/it]
+ 88%|████████▊ | 440/500 [40:22<05:21,  5.36s/it]
+                                                 
+{'loss': '12.01', 'grad_norm': '3.83', 'learning_rate': '8.029e-08', 'epoch': '0.7383'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  88%|████████▊ | 440/500 [40:22<05:21,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  88%|████████▊ | 441/500 [40:27<05:13,  5.32s/it]
+[36m(head, rank=0, pid=3718)[0m  88%|████████▊ | 442/500 [40:33<05:10,  5.36s/it]
+[36m(head, rank=0, pid=3718)[0m  89%|████████▊ | 443/500 [40:39<05:11,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  89%|████████▉ | 444/500 [40:44<05:03,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  89%|████████▉ | 445/500 [40:49<04:57,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  89%|████████▉ | 446/500 [40:55<04:52,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  89%|████████▉ | 447/500 [41:00<04:46,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  90%|████████▉ | 448/500 [41:05<04:41,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  90%|████████▉ | 449/500 [41:11<04:37,  5.43s/it]
+ 90%|█████████ | 450/500 [41:16<04:31,  5.43s/it]
+                                                 
+{'loss': '12.23', 'grad_norm': '3.518', 'learning_rate': '5.635e-08', 'epoch': '0.755'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 450/500 [41:16<04:31,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 38.40it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 33.76it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.12it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.41it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 30.96it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 30.83it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.68it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.49it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.43it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.44it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.34it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.47it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.40it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.38it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.36it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '10.3', 'eval_runtime': '2.102', 'eval_samples_per_second': '239.8', 'eval_steps_per_second': '29.97', 'epoch': '0.755'}
+[36m(head, rank=0, pid=3718)[0m 
+ 90%|█████████ | 450/500 [41:18<04:31,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.36it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m                                                [A
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 451/500 [41:24<05:00,  6.13s/it]
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 452/500 [41:29<04:42,  5.88s/it]
+[36m(head, rank=0, pid=3718)[0m  91%|█████████ | 453/500 [41:35<04:29,  5.73s/it]
+[36m(head, rank=0, pid=3718)[0m  91%|█████████ | 454/500 [41:40<04:18,  5.61s/it]
+[36m(head, rank=0, pid=3718)[0m  91%|█████████ | 455/500 [41:45<04:08,  5.53s/it]
+[36m(head, rank=0, pid=3718)[0m  91%|█████████ | 456/500 [41:51<04:02,  5.52s/it]
+[36m(head, rank=0, pid=3718)[0m  91%|█████████▏| 457/500 [41:56<03:56,  5.50s/it]
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 458/500 [42:02<03:49,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 459/500 [42:07<03:43,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  92%|███��█████▏| 460/500 [42:13<03:37,  5.44s/it]
+                                                 
+{'loss': '11.68', 'grad_norm': '4.379', 'learning_rate': '3.654e-08', 'epoch': '0.7718'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 460/500 [42:13<03:37,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 461/500 [42:18<03:31,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  92%|█████████▏| 462/500 [42:24<03:28,  5.49s/it]
+[36m(head, rank=0, pid=3718)[0m  93%|█████████▎| 463/500 [42:29<03:21,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  93%|█████████▎| 464/500 [42:34<03:13,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  93%|█████████▎| 465/500 [42:40<03:08,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  93%|█████████▎| 466/500 [42:45<03:00,  5.30s/it]
+[36m(head, rank=0, pid=3718)[0m  93%|█████████▎| 467/500 [42:50<02:56,  5.34s/it]
+[36m(head, rank=0, pid=3718)[0m  94%|█████████▎| 468/500 [42:56<02:51,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m  94%|█████████▍| 469/500 [43:01<02:47,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  94%|█████████▍| 470/500 [43:07<02:43,  5.46s/it]
+                                                 
+{'loss': '11.52', 'grad_norm': '4.055', 'learning_rate': '2.095e-08', 'epoch': '0.7886'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  94%|█████████▍| 470/500 [43:07<02:43,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  94%|█████████▍| 471/500 [43:12<02:38,  5.48s/it]
+[36m(head, rank=0, pid=3718)[0m  94%|█████████▍| 472/500 [43:18<02:32,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  95%|█████████▍| 473/500 [43:23<02:25,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  95%|█████████▍| 474/500 [43:28<02:20,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  95%|█████████▌| 475/500 [43:34<02:14,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  95%|█████████▌| 476/500 [43:39<02:09,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  95%|█████████▌| 477/500 [43:45<02:04,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  96%|█████████▌| 478/500 [43:50<02:00,  5.46s/it]
+[36m(head, rank=0, pid=3718)[0m  96%|█████████▌| 479/500 [43:55<01:54,  5.45s/it]
+[36m(head, rank=0, pid=3718)[0m  96%|█████████▌| 480/500 [44:01<01:48,  5.43s/it]
+                                                 
+{'loss': '12.11', 'grad_norm': '3.723', 'learning_rate': '9.63e-09', 'epoch': '0.8054'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  96%|█████████▌| 480/500 [44:01<01:48,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  96%|█████████▌| 481/500 [44:06<01:43,  5.44s/it]
+[36m(head, rank=0, pid=3718)[0m  96%|█████████▋| 482/500 [44:12<01:37,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 483/500 [44:17<01:31,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 484/500 [44:23<01:26,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 485/500 [44:28<01:20,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 486/500 [44:33<01:15,  5.39s/it]
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 487/500 [44:39<01:10,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  98%|█████████▊| 488/500 [44:44<01:04,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  98%|█████████▊| 489/500 [44:50<00:59,  5.43s/it]
+ 98%|█████████▊| 490/500 [44:55<00:54,  5.41s/it]
+                                                 
+{'loss': '11.54', 'grad_norm': '3.979', 'learning_rate': '2.645e-09', 'epoch': '0.8221'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  98%|█████████▊| 490/500 [44:55<00:54,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  98%|█████████▊| 491/500 [45:00<00:48,  5.42s/it]
+[36m(head, rank=0, pid=3718)[0m  98%|█████████▊| 492/500 [45:06<00:43,  5.47s/it]
+[36m(head, rank=0, pid=3718)[0m  99%|█████████▊| 493/500 [45:11<00:37,  5.43s/it]
+[36m(head, rank=0, pid=3718)[0m  99%|█████████▉| 494/500 [45:17<00:32,  5.40s/it]
+[36m(head, rank=0, pid=3718)[0m  99%|█████████▉| 495/500 [45:22<00:27,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m  99%|█████████▉| 496/500 [45:27<00:21,  5.38s/it]
+[36m(head, rank=0, pid=3718)[0m  99%|█████████▉| 497/500 [45:33<00:16,  5.37s/it]
+[36m(head, rank=0, pid=3718)[0m 100%|█████████▉| 498/500 [45:38<00:10,  5.41s/it]
+[36m(head, rank=0, pid=3718)[0m 100%|█████████▉| 499/500 [45:43<00:05,  5.35s/it]
+100%|██████████| 500/500 [45:49<00:00,  5.33s/it]
+                                                 
+{'loss': '11.38', 'grad_norm': '4.016', 'learning_rate': '2.187e-11', 'epoch': '0.8389'}
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m 100%|██████████| 500/500 [45:49<00:00,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   0%|          | 0/63 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m   8%|▊         | 5/63 [00:00<00:01, 39.02it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  14%|█▍        | 9/63 [00:00<00:01, 33.87it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  21%|██        | 13/63 [00:00<00:01, 32.35it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  27%|██▋       | 17/63 [00:00<00:01, 31.55it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  33%|███▎      | 21/63 [00:00<00:01, 31.19it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  40%|███▉      | 25/63 [00:00<00:01, 30.92it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  46%|████▌     | 29/63 [00:00<00:01, 30.79it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  52%|█████▏    | 33/63 [00:01<00:00, 30.67it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  59%|█████▊    | 37/63 [00:01<00:00, 30.61it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  65%|██████▌   | 41/63 [00:01<00:00, 30.57it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  71%|███████▏  | 45/63 [00:01<00:00, 30.56it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  78%|███████▊  | 49/63 [00:01<00:00, 30.60it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  84%|████████▍ | 53/63 [00:01<00:00, 30.66it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  90%|█████████ | 57/63 [00:01<00:00, 30.58it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m  97%|█████████▋| 61/63 [00:01<00:00, 30.59it/s][A
+                                                 
+[36m(head, rank=0, pid=3718)[0m 
+                                               
+[A{'eval_loss': '10.11', 'eval_runtime': '2.089', 'eval_samples_per_second': '241.2', 'eval_steps_per_second': '30.16', 'epoch': '0.8389'}
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 500/500 [45:51<00:00,  5.33s/it]
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 63/63 [00:02<00:00, 30.59it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+                                               [A
+[36m(head, rank=0, pid=3718)[0m 
+[36m(head, rank=0, pid=3718)[0m Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s][A
+[36m(head, rank=0, pid=3718)[0m 
+Writing model shards: 100%|██████████| 1/1 [00:08<00:00,  8.99s/it][A
+Writing model shards: 100%|██████████| 1/1 [00:08<00:00,  8.99s/it]
+[36m(head, rank=0, pid=3718)[0m 
+                                                 
+{'train_runtime': '2775', 'train_samples_per_second': '1.441', 'train_steps_per_second': '0.18', 'train_loss': '18.7', 'epoch': '0.8389'}
+[36m(head, rank=0, pid=3718)[0m 
+100%|██████████| 500/500 [46:11<00:00,  5.33s/it]
+100%|██████████| 500/500 [46:11<00:00,  5.54s/it]
+[36m(head, rank=0, pid=3718)[0m [Done] Training complete — 500 steps finished.
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO comm 0x31da5290 rank 0 nranks 2 cudaDev 0 busId 8d000 - Destroy COMPLETE
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO comm 0x2de8c590 rank 1 nranks 2 cudaDev 0 busId 8d000 - Destroy COMPLETE
+[36m(head, rank=0, pid=3718)[0m ariel-ddp-26962fa6-head:41702:41702 [0] NCCL INFO ENV/Plugin: Closing env plugin ncclEnvDefault
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ariel-ddp-26962fa6-worker1:34230:34230 [0] NCCL INFO ENV/Plugin: Closing env plugin ncclEnvDefault
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + __skypilot_user_exit_code=0
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ++ wc -l
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m ++ findmnt -t fuse.rclone --noheading
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + '[' 0 -gt 0 ']'
+[36m(worker1, rank=1, pid=3066, ip=10.16.3.211)[0m + exit 0
+[36m(head, rank=0, pid=3718)[0m + __skypilot_user_exit_code=0
+[36m(head, rank=0, pid=3718)[0m ++ findmnt -t fuse.rclone --noheading
+[36m(head, rank=0, pid=3718)[0m ++ wc -l
+[36m(head, rank=0, pid=3718)[0m + '[' 0 -gt 0 ']'
+[36m(head, rank=0, pid=3718)[0m + exit 0
+[0m[32m✓ Job finished (status: SUCCEEDED).[0m[0m
